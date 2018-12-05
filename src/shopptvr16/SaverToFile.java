@@ -7,7 +7,6 @@ package shopptvr16;
 
 import entity.Buyer;
 import entity.Product;
-import entity.Seller;
 import entity.Purchase;
 
 import interfaces.Saveble;
@@ -78,10 +77,6 @@ public class SaverToFile implements Saveble {
         }
     }
 
-    @Override
-    public void saveSellers(List<Seller> sellers) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     @Override
     public List<Product> loadProducts() {
@@ -140,11 +135,7 @@ public class SaverToFile implements Saveble {
         return purchases;
     }
 
-    @Override
-    public List<Seller> loadSellers() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+        
     
     
 }

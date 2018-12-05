@@ -8,14 +8,11 @@ package shopptvr16;
 import entity.Buyer;
 import entity.Product;
 import entity.Purchase;
-import entity.Seller;
 import interfaces.Insertable;
-import java.util.List;
 import classes.AddProduct;
 import classes.AddBuyer;
 import classes.AddPurchase;
 import classes.HistoryPurchases;
-import entity.Seller;
 import java.util.List;
 
 

@@ -8,13 +8,12 @@ package shopptvr16;
 import classes.AddBuyer;
 import classes.AddProduct;
 import classes.AddPurchase;
-import classes.CityShower;
 
 import entity.Product;
 import entity.Buyer;
-import entity.Seller;
 import entity.Purchase;
 import interfaces.Insertable;
+import interfaces.Saveble;
 
 import java.util.Scanner;
 import java.util.List;
@@ -26,17 +25,16 @@ class App {
     public List<Product> products = new ArrayList<>();
     public List<Buyer> buyers = new ArrayList<>();
     public List<Purchase> purchases = new ArrayList<>();
-    public List<Seller> sellers = new ArrayList<>();
     
     public Insertable inserter = new ConsoleInsert();
-    public CityShower cityShower= new CityShower();
-    public SaverToFile saverToFile;
+    //public SaverToFile saverToFile;
+    public Saveble saver;
     
     public App(){
-    this.saverToFile = new SaverToFile();
-        this.products=saverToFile.loadProducts();
-        this.buyers = saverToFile.loadBuyers();
-        this.purchases = saverToFile.loadPurchase();
+        this.saver = new SaverToBase();
+        this.products=saver.loadProducts();
+        this.buyers = saver.loadBuyers();
+        this.purchases = saver.loadPurchase();
     }
     
     
@@ -55,7 +53,6 @@ class App {
 //            System.out.println("3 - Баланс");
             System.out.println("3 - Покупка");
             System.out.println("4 - Товары покупетелей");
-            System.out.println("5 - Статистика городов");
             
          
             
@@ -69,14 +66,14 @@ class App {
                 case "1":
                     AddProduct addProduct = new AddProduct();
                     this.products.add(addProduct.add());
-                    saverToFile.saveProducts(products);
+                    saver.saveProducts(products);
                     System.out.println(products);
                     System.out.println("--- Товар добавлен ----");
                     break;
                 case "2":
                     AddBuyer addBuyer = new AddBuyer();
                     this.buyers.add(addBuyer.add());
-                    saverToFile.saveBuyers(buyers);
+                    saver.saveBuyers(buyers);
                     System.out.println(buyers);
                     System.out.println("--- Покупатель идентифицирован ----");
                     break;
@@ -88,7 +85,7 @@ class App {
                     AddPurchase addPurchase = new AddPurchase();
                     System.out.println("");
                     this.purchases.add(addPurchase.add(products,buyers,purchases));
-                    saverToFile.saveHistories(purchases);
+                    saver.saveHistories(purchases);
                     System.out.println("---Покупатель выбрал товар---");
                     break;
                 case "4":
@@ -96,7 +93,6 @@ class App {
                     break;
                 case "5":
                     System.out.println("");
-                    cityShower.show(buyers);
                     break;
                 
                 default:

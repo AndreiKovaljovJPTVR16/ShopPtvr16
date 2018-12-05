@@ -5,17 +5,26 @@
  */
 package entity;
 
-
 import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
+@Entity
+public class Purchase implements Serializable {
 
-public class Purchase implements Serializable{
-    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private Product product;
     private Buyer buyer;
+    @Temporal(TemporalType.TIMESTAMP)
     private Date date;
     private Integer purchaseCount;
 
@@ -30,8 +39,6 @@ public class Purchase implements Serializable{
         this.date = calendar.getTime();
     }
 
-    
-    
     public Product getProduct() {
         return product;
     }
@@ -64,6 +71,18 @@ public class Purchase implements Serializable{
         this.purchaseCount = purchaseCount;
     }
     
+    @Override
+    public String toString() {
+        return "Purchase{" + "product=" + product + ", buyer=" + buyer + ", purchaseCount=" + purchaseCount +", date=" + date + '}';
+    }
     
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
     
+
 }

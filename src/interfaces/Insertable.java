@@ -9,8 +9,6 @@ package interfaces;
 import entity.Product;
 import entity.Buyer;
 import entity.Purchase;
-import entity.Seller;
-
 import java.util.List;
 
 
