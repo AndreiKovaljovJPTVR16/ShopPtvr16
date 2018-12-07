@@ -2,19 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/F:/Java/ShopPTVR16/src/interfaces/Saveble.java</file>
-            <file>file:/F:/Java/ShopPTVR16/src/interfaces/Insertable.java</file>
-            <file>file:/F:/Java/ShopPTVR16/src/entity/Buyer.java</file>
-            <file>file:/F:/Java/ShopPTVR16/src/classes/AddPurchase.java</file>
-            <file>file:/F:/Java/ShopPTVR16/src/shopptvr16/App.java</file>
-            <file>file:/F:/Java/ShopPTVR16/src/entity/Purchase.java</file>
-            <file>file:/F:/Java/ShopPTVR16/src/classes/CityShower.java</file>
-            <file>file:/F:/Java/ShopPTVR16/src/shopptvr16/ConsoleInsert.java</file>
-            <file>file:/F:/Java/ShopPTVR16/src/shopptvr16/SaverToFile.java</file>
-            <file>file:/F:/Java/ShopPTVR16/src/classes/AddBuyer.java</file>
-            <file>file:/F:/Java/ShopPTVR16/src/shopptvr16/ShopPTVR16.java</file>
-            <file>file:/F:/Java/ShopPTVR16/src/classes/HistoryPurchases.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
